@@ -98,7 +98,7 @@ span a:hover {
 	top: 4rem;
   margin-bottom: 4rem;
 	border-bottom: 2px solid #3a3a3a;
-  background-image: url('../resources/images/Community Work Central pic.png');
+  background-image: url('/images/Community Work Central pic.png');
   min-height: 350px;
 }
 .banner-content {
