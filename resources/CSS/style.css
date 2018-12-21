@@ -94,7 +94,7 @@ span a:hover {
 
 /*Banner*/
 .banner {
-  	position: relative;
+  position: relative;
 	top: 4rem;
   	margin-bottom: 4rem;
   	background-image: url('../../resources/images/Community Work Central pic.png');
@@ -185,66 +185,70 @@ span a:hover {
 }
 
 /*Information Section*/
+.information {
+  display: flex;
+  flex-direction: column;
+}
 .top-section, .bottom-section {
   display: flex;
   height: 12rem;
-  padding: 0.5rem 1rem;
-}
-.top-section div, .bottom-section div {
-  width: 33.33%;
-}
-.top-section button, .bottom-section button {
-  width: 100%;
-  height: 100%;
-}
-.card .dropbtn {
-  background-color: #2b96ab;
-  color: white;
-  font-size: 1.5rem;
-  padding: 2rem 1.5rem 8rem 1.5rem;
-  cursor: pointer;
-  width: 100%;
-  height: 100%;
-  border: none;
+  padding: 0 1rem;
 }
 .card {
   position: relative;
   display: inline-block;
-  margin: 0.5rem 1rem 1rem 1rem;
+  padding: 1rem 1rem 0.25rem 1rem;
+  width: 33.33%;
 }
-.list {
+.card .dropbtn {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height:100%;
+  background-color: #2b96ab;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+}
+.card:hover .dropbtn{
+  background-color: #3e8e41;
+  transform: scale(1.02);
+  box-shadow: 0px 10px 8px rgba(0,0,0,0.5);
+}
+.card .list {
   display: none;
   position: absolute;
-  top: 4rem;
+  top: 5rem;
   left: 33.33%;
+  width: 25%;
+  padding: 0.5rem;
   background-color: #3e8e41;
-  width: 100%;
-  height: 60%;
-  text-align: left;
+  z-index: 1;
+}
+.card:hover .list {
+  display: flex;
+  flex-direction: column;
+  transform: scale(1.02);
+  box-shadow: 0px 10px 8px rgba(0,0,0,0.5);
 }
 .list a {
   color: white;
-  padding: 0.5rem;
+  padding: 0.25rem;
 }
 .list a:hover {
   background-color: #f4f4f4;
   color: #89357c;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
-.card:hover .list {
-  display: flex;
-  flex-direction: column;
-}
-.card:hover .dropbtn {
-  background-color: #3e8e41;
-  transform: scale(1.02);
-  box-shadow: 0px 10px 8px rgba(0,0,0,0.5);
+.card button {
+  padding-top: 1.25rem;
 }
 i {
-  position: absolute;
-  left: 45%;
-  top: 45%;
+  padding-top: 1.5rem;
 }
 
 /*Quick Links Section*/
