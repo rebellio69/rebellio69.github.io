@@ -1,4 +1,4 @@
-* latin
+/* latin
 font-family: 'Lato', sans-serif;
 font-family: 'Ubuntu Mono', monospace;
 font-family: 'Ubuntu', sans-serif; */
@@ -87,7 +87,7 @@ span a {
   color: white;
 	font-weight: bold;
   font-size: 1.5rem;
-  transition: color 0.3s ease-in 0.1s;
+  transition: color 0.2s ease-in 0.1s;
 }
 span a:hover {
 	color: #89357c;
@@ -98,6 +98,7 @@ nav input[type=text] {
 }
 nav input[type=text]:hover {
   background-color: #89357c;
+  transition: 0.2s ease-in 0.1s;
 }
 
 /*Banner*/
@@ -215,6 +216,7 @@ nav input[type=text]:hover {
   width: 100%;
   height: 100%;
   border: none;
+  transition: background-color 0.5s ease-in, width 0.8s linear, font-size 0.8s ease-in;
 }
 .dropdown:hover .dropbtn {
   background-color: #5f9637;
@@ -222,22 +224,25 @@ nav input[type=text]:hover {
   font-size: 1.5rem;
 }
 .dropdown .links {
-  display: none;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
   position: absolute;
   top: 0;
-  left: 52%;
+  left: 100%;
   background-color: #c9b6c6;
   width: 48%;
   height: 100%;
-  z-index: 1;
 }
 .dropdown:hover .links {
-  display: flex;
-  flex-direction: column;
+  visibility: visible;
+  transition: 0.8s linear;
+  left: 52%;
 }
 .links a {
   color: black;
   padding: 12px 16px;
+  transition: background-color 0.1s ease-in, color 0.3s ease-in, font-weight 0.3s ease-in, font-size 0.3s ease-in;
 }
 .links a:hover {
   background-color: #795a74;
@@ -257,6 +262,9 @@ nav input[type=text]:hover {
 .communication.card, .risk.card, .safety.card {
   margin: 0.5rem;
 }
+.card button {
+  padding-top: 1.25rem;
+}
 .card .dropbtn {
   display: flex;
   flex-direction: column-reverse;
@@ -269,43 +277,54 @@ nav input[type=text]:hover {
   font-size: 1.5rem;
   cursor: pointer;
   border: none;
+  transition: all 0.3s ease-in 0.1s;
 }
+
 .card:hover .dropbtn{
   background-color: #3e8e41;
   transform: scale(1.02);
-  box-shadow: 0px 10px 8px rgba(0,0,0,0.5);
+  box-shadow: 8px 10px 5px rgba(0,0,0,0.6);
 }
-.card .list {
-  display: none;
+
+.list {
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
   position: absolute;
   top: 3.2rem;
   left: 37%;
   width: 26%;
-  padding: 0.5rem;
-  background-color: #3e8e41;
+  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
   z-index: 1;
 }
 .card:hover .list {
-  display: flex;
-  flex-direction: column;
-  transform: scale(1.02);
-  box-shadow: 0px 10px 8px rgba(0,0,0,0.5);
+  visibility: visible;
+  background-color: #3e8e41;
+  transition: 0.4s ease-in 0.2s;
 }
+
+.list:hover {
+  box-shadow: 6px 6px 2px rgba(0,0,0,0.5);
+  transform: scale(1.01);
+}
+
 .list a {
   color: white;
   padding: 0.25rem;
+  transition: background-color 0.1s ease-in, color 0.3s ease-in, font-weight 0.3s ease-in, font-size 0.3s ease-in;
 }
 .list a:hover {
-  background-color: #f4f4f4;
+  background-color: #2b96ab;
   color: #89357c;
   font-weight: bold;
   font-size: 1.1rem;
 }
-.card button {
-  padding-top: 1.25rem;
-}
 .card i {
   padding-top: 1.5rem;
+  transition: all 0.1s ease-out;
+}
+.card:hover i {
+  display: none;
 }
 
 /*Quick Links Buttons*/
@@ -324,33 +343,42 @@ nav input[type=text]:hover {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out 0.1s;
+}
+.maps:hover, .address:hover, .EM:hover, .path:hover{
   font-size: 1.2rem;
+  transform: scale(1.01);
+  box-shadow: 6px 6px 2px rgba(0,0,0,0.5);
 }
 .ql i, .ql a {
   padding: 1.5rem;
 }
 
-.AD, .MH {
+.AD {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: auto;
-  background-color: white;
-  overflow: hidden;
-  border: 1px solid green;
   margin: 1.5rem 0.5rem 1.5rem 0.5rem;
+  transition: all 0.3s ease-in-out 0.1s;
+}
+
+.MH  {
+  margin: 1.5rem 0.5rem 1.5rem 0.5rem;
+  transition: all 0.3s ease-in-out 0.1s;
+}
+.MH img {
+  width: 100%;
+  height:100%;
+  overflow: hidden;
 }
 .AD img {
-  width: 40%;
+  width: 50%;
   height: auto;
   margin-left: auto;
   margin-right: auto;
 }
-.MH img {
-  width: 90%;
-}
 
-.ql:hover {
+.AD:hover, .MH:hover {
+  font-weight: bold;
   transform: scale(1.01);
-  box-shadow: 0px 10px 8px rgba(0,0,0,0.5);
+  box-shadow: 6px 6px 2px rgba(0,0,0,0.5);
 }
