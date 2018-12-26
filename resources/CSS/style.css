@@ -1,4 +1,4 @@
-/* latin
+* latin
 font-family: 'Lato', sans-serif;
 font-family: 'Ubuntu Mono', monospace;
 font-family: 'Ubuntu', sans-serif; */
@@ -48,18 +48,18 @@ html {
 }
 .container {
 	font-family: 'Ubuntu', sans-serif;
-  	background-color: #e0e0d1;
+  background-color: #e0e0d1;
 }
 h1, h2, p {
- 	text-align: center;
-	color: white;
+  text-align: center;
+  color: white;
 }
 
 /*Header Section*/
 header {
 	display: flex;
-  	justify-content: center;
-  	align-items: center;
+  justify-content: center;
+  align-items: center;
 	height: 4rem;
 	position: fixed;
 	z-index: 1;
@@ -74,8 +74,8 @@ header {
 	padding-left: 1.5rem;
 }
 .logo img {
-  	height: 3rem;
-  	width: auto;
+  height: 3rem;
+  width: auto;
 }
 header nav {
 	padding-right: 1.5rem;
@@ -84,21 +84,29 @@ nav span {
 	padding-left: 1rem;
 }
 span a {
-  	color: white;
+  color: white;
 	font-weight: bold;
-  	font-size: 1.5rem;
+  font-size: 1.5rem;
+  transition: color 0.3s ease-in 0.1s;
 }
 span a:hover {
 	color: #89357c;
+}
+nav input[type=text] {
+  height: 1.5rem;
+  font-size: 1.25rem;
+}
+nav input[type=text]:hover {
+  background-color: #89357c;
 }
 
 /*Banner*/
 .banner {
   position: relative;
 	top: 4rem;
-  	margin-bottom: 4rem;
-  	background-image: url('../../resources/images/Community Work Central pic.png');
-  	min-height: 350px;
+  margin-bottom: 4rem;
+  background-image: url('../../Resources/images/Community Work Central pic.png');
+  min-height: 350px;
 }
 .banner-content {
   display: flex;
@@ -108,15 +116,16 @@ span a:hover {
 .banner h1 {
   font-size: 3.5rem;
   font-weight: bold;
-  padding: 3rem 0 0.25rem 0;
+  padding-top: 2rem;
 }
 .banner h2 {
-  font-size: 2.5rem;
-  padding: 0.25rem 0 0.5rem 0;
+  font-size: 1.5rem;
+  padding-left: 22rem;
 }
 .banner p {
   font-size: 2rem;
-  padding: 0.25rem 0 1rem 0;
+  padding: 1.5rem 0 0.5rem 0;
+  width: 40%;
 }
 .banner .button {
   font-size: 1.5rem;
@@ -125,45 +134,106 @@ span a:hover {
   cursor: pointer;
   margin-top: 2rem;
   padding: 1.5rem;
+  transition: background-color 0.3s ease-in 0.1s, color 0.3s ease-in 0.1s;
 }
 .banner .button:hover {
   background-color: #89357c;
   color: #f4f4f4;
 }
 
-/*Centre and Agency Section*/
-.process {
-  display: flex;
+/*Grid Container*/
+.grid {
+  display: grid;
+  height: 110vh;
+  grid-template: 35vh 25vh 25vh 12vh 12vh / repeat(12, 1fr);
   padding: 1rem;
 }
+
+/*Centre and Agency Grid*/
+.centre {
+  grid-column: 1 / span 6;
+}
+.agency {
+  grid-column: 7 / span 6;
+}
 .centre, .agency {
-  width: 50%;
-  margin: 0.5rem 1rem 1rem 1rem;
+  margin: 1rem 0.5rem 1.5rem 0.5rem;
+
+}
+/*Information Grid*/
+.WLS {
+  grid-column: 1 / span 4;
+}
+.NC {
+  grid-column: 5 / span 4;
+}
+.hours {
+  grid-column: 9 / span 4;
+}
+.communication {
+  grid-column: 1 / span 4;
+}
+.risk {
+  grid-column: 5 / span 4;
+}
+.safety {
+  grid-column: 9 / span 4;
+}
+
+/*Qucik Links Grid*/
+.MH {
+  grid-column: 1 / span 4;
+  grid-row: 4 / span 2;
+}
+.AD {
+  grid-column: 5 / span 4;
+  grid-row: 4 / span 2;
+}
+.maps {
+  grid-column: 9 / span 2;
+}
+.address {
+  grid-column: 11 / span 2;
+}
+.EM {
+  grid-column: 9 / span 2;
+}
+.path {
+  grid-column: 11 / span 2;
+}
+
+/*Centre and Agency Dropdown*/
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 .dropdown .dropbtn {
   background-color: #89357c;
   color: white;
-  font-size: 1.5rem;
+  font-size: 2rem;
   cursor: pointer;
   width: 100%;
   height: 100%;
   border: none;
 }
-.dropdown {
-  position: relative;
-  display: inline-block;
-  height: 12rem;
-  margin-bottom: 1rem;
+.dropdown:hover .dropbtn {
+  background-color: #5f9637;
+  width: 50%;
+  font-size: 1.5rem;
 }
 .dropdown .links {
   display: none;
   position: absolute;
-  top: -0.5rem;
-  left: 50%;
+  top: 0;
+  left: 52%;
   background-color: #c9b6c6;
-  width: 50%;
+  width: 48%;
   height: 100%;
   z-index: 1;
+}
+.dropdown:hover .links {
+  display: flex;
+  flex-direction: column;
 }
 .links a {
   color: black;
@@ -175,30 +245,17 @@ span a:hover {
   font-weight: bold;
   font-size: 1.2rem;
 }
-.dropdown:hover .links {
-  display: flex;
-  flex-direction: column;
-}
-.dropdown:hover .dropbtn {
-  background-color: #5f9637;
-  width: 50%;
-}
 
-/*Information Section*/
-.information {
-  display: flex;
-  flex-direction: column;
-}
-.top-section, .bottom-section {
-  display: flex;
-  height: 12rem;
-  padding: 0 1rem;
-}
+/*Information Section Dropdown*/
 .card {
   position: relative;
   display: inline-block;
-  padding: 1rem 1rem 0.25rem 1rem;
-  width: 33.33%;
+}
+.WLS.card, .NC.card, .hours.card {
+  margin: 0.5rem;
+}
+.communication.card, .risk.card, .safety.card {
+  margin: 0.5rem;
 }
 .card .dropbtn {
   display: flex;
@@ -221,9 +278,9 @@ span a:hover {
 .card .list {
   display: none;
   position: absolute;
-  top: 5rem;
-  left: 33.33%;
-  width: 25%;
+  top: 3.2rem;
+  left: 37%;
+  width: 26%;
   padding: 0.5rem;
   background-color: #3e8e41;
   z-index: 1;
@@ -247,28 +304,53 @@ span a:hover {
 .card button {
   padding-top: 1.25rem;
 }
-i {
+.card i {
   padding-top: 1.5rem;
 }
 
-/*Quick Links Section*/
-.quick-links {
-  display: flex;
-  height: 8rem;
-}
-.quick-links .button {
-  width: 25%;
-  font-size: 1.5rem;
-  text-align: center;
-  padding-top: 1.5rem;
+/*Quick Links Buttons*/
+.maps, .address {
+  margin: 1.5rem 0.5rem 0.25rem 0.5rem;
   color: white;
   background-color: #5f9637;
-  opacity: 0.8;
-  margin: 1.75rem 2rem;
 }
-.quick-links .button:hover {
-  transform: scale(1.02);
-  opacity: 1;
-  font-weight: bold;
+.EM, .path {
+  margin: 0.25rem 0.5rem 1.5rem 0.5rem;
+  color: white;
+  background-color: #5f9637;
+  border: 1px solid orange;
+}
+.maps, .address, .EM, .path {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.2rem;
+}
+.ql i, .ql a {
+  padding: 1.5rem;
+}
+
+.AD, .MH {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: auto;
+  background-color: white;
+  overflow: hidden;
+  border: 1px solid green;
+  margin: 1.5rem 0.5rem 1.5rem 0.5rem;
+}
+.AD img {
+  width: 40%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+.MH img {
+  width: 90%;
+}
+
+.ql:hover {
+  transform: scale(1.01);
   box-shadow: 0px 10px 8px rgba(0,0,0,0.5);
 }

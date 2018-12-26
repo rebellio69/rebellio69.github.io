@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>CW</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="/resources/CSS/reset.css">
-    <link rel="stylesheet" type="text/css" href="/resources/CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="./resources/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./resources/css/style.css">
 
   </head>
   <body>
@@ -13,13 +13,12 @@
   <!--Top section with navigation-->
     <header class="main-header">
       <div class="logo">
-          <a href="#"><img src="./resources/images/tatou-logo.png" alt="logo"></a>
+        <a href="#"><img src="./resources/images/tatou-logo.png" alt="logo"></a>
       </div>
       <nav class="main-nav">
-        <span><a href="#">CP</a></span>
-        <span><a href="#">CW</a></span>
+        <span><a href="#"><i class="fas fa-home"></i></a></span>
         <span><a href="#">IOMS</a></span>
-        <span><a href="#">Path</a></span>
+        <span><input type="text" placeholder="Search.."></span>
       </nav>
     </header>
 
@@ -27,17 +26,18 @@
     <div class="banner container">
       <div class="banner-content">
         <h1>Community Work</h1>
-        <h2>Supported Decision Framework</h2>
+        <h2>Practice</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
         <a href="#" class="button">Initial Assessment</a>
       </div>
     </div>
 
-	<!--CW Centre and Agency Section-->
-    <div class="process container">
+  <!--Grid-->
+    <div class="grid container">
+  <!--CW Centre and Agency Section-->
       <div class="centre dropdown">
         <button class="dropbtn">Community Work Centre</button>
-        <div class="centre links">
+        <div class="cw-centre links">
           <a href="#">CWC Induction</a></li>
           <a href="#">Daily Management</a></li>
           <a href="#">Tools / Equipment</a></li>
@@ -46,16 +46,13 @@
       </div>
       <div class="agency dropdown">
         <button class="dropbtn">Community Work Agency</button>
-        <div class="agency links">
+        <div class="cw-agency links">
           <a href="#">CWA Induction</a></li>
           <a href="#">Source and Maintain Partnerships</a></li>
         </div>
       </div>
-    </div>
 
-  <!--Information Section-->
-  <div class="information container">
-    <div class="top-section">
+      <!--Information Section-->
       <div class="WLS card">
         <button class="dropbtn"><i class="fas fa-paint-roller fa-2x"></i>Work and Living Skills</button>
         <div class="WLS list">
@@ -64,6 +61,7 @@
           <a href="#">Facilitation</a>
         </div>
       </div>
+
       <div class="NC card">
         <button class="dropbtn"><i class="fas fa-file-contract fa-2x"></i>Addressing Non-compliance</button>
         <div class="NC list">
@@ -72,6 +70,7 @@
           <a href="#">Legal Action</a>
         </div>
       </div>
+
       <div class="hours card">
         <button class="dropbtn"><i class="fas fa-user-clock fa-2x"></i>Monitor and Record Hours</button>
         <div class="hours list">
@@ -80,17 +79,16 @@
           <a href="#">Remission</a>
         </div>
       </div>
-    </div>
 
-    <div class="bottom-section">
       <div class="communication card">
         <button class="dropbtn"><i class="fas fa-comments fa-2x"></i>Communication</button>
         <div class="communication list">
           <a href="#">Programmes</a>
           <a href="#">Partnerships</a>
-          <a href="#">Facilitation</a>
-        </div>
-      </div>
+              <a href="#">Facilitation</a>
+            </div>
+          </div>
+
       <div class="risk card">
         <button class="dropbtn"><i class="fas fa-user-ninja fa-2x"></i>Risk</button>
         <div class="risk list">
@@ -99,24 +97,34 @@
           <a href="#">Substance Use</a>
         </div>
       </div>
+
       <div class="safety card">
-        <button class="dropbtn"><i class="fas fa-fire-extinguisher fa-2x"></i></i>Health and Safety</button>
+        <button class="dropbtn"><i class="fas fa-fire-extinguisher fa-2x"></i>Health and Safety</button>
         <div class="safety list">
           <a href="#">Incidents</a>
           <a href="#">JSA</a>
           <a href="#">PPE</a>
         </div>
       </div>
+
+    <!--quick links section-->
+      <a href="https://www.mentalhealth.org.nz" target="_blank" class="MH ql">
+      <img src="./resources/images/MH logo.png" alt="Mental health logo"></a>
+
+      <a href="https://alcoholdrughelp.org.nz/" target="_blank" class="AD ql">
+      <img src="./resources/images/ADANZ-logo2.png" alt="Mental health logo">
+      <img src="./resources/images/ADANZ-logo2.png" alt="Mental health logo"></a>
+
+      <a href="https://maps.google.co.nz/" target="_blank" class="maps ql"><i class="fas fa-route"></i>Google Maps</a>
+
+      <a href="https://www.nzpost.co.nz/tools/address-postcode-finder/suggest/" target="_blank" class="address ql">
+      <i class="fas fa-envelope"></i>Address Finder</a>
+
+      <a href="#" target="_blank" class="EM ql"><i class="fas fa-broadcast-tower"></i>E.M. Portal</a>
+
+      <a href="#" target="_blank" class="path ql"><i class="fas fa-road"></i>Path</a>
+
+
     </div>
-  </div>
-
-<!--quick links section-->
-  <div class="quick-links container">
-    <a href="#" class="button">Forms</a>
-    <a href="#" class="button">Breaches & Applications</a>
-    <a href="#" class="button">H&S Tracker</a>
-    <a href="#" class="button">Cobra</a>
-  </div>
-
   </body>
 </html>
