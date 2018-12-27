@@ -122,7 +122,7 @@ nav input[type=text]:hover {
   position: relative;
 	top: 4rem;
   margin-bottom: 4rem;
-  background-image: url('../../Resources/images/Community Work Central pic.png');
+  background-image: url('../../resources/images/Community Work Central pic.png');
   min-height: 350px;
 }
 .banner-content {
