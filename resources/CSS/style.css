@@ -64,11 +64,33 @@ html {
 }
 .container {
 	font-family: 'Ubuntu', sans-serif;
-  background-color: #e0e0d1;
+  background-color: #d6f0f5;
 }
 h1, h2, p {
   text-align: center;
   color: white;
+}
+h1, h2 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  color: white;
+}
+h1 {
+  font-size: 2.25rem;
+}
+h2 {
+  font-size: 1.75rem;
+}
+ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+li {
+  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+}
+li a:hover {
+  color: #89357c;
+  font-weight: bold;
 }
 
 /*Header Section*/
@@ -81,7 +103,7 @@ header {
 	z-index: 1;
 	width: 100%;
 	background-color: #1a7b90;
-	opacity: 0.8;
+	opacity: 0.9;
 	border-bottom: 2px solid #3a3a3a;
 }
 .logo {
@@ -92,6 +114,10 @@ header {
 .logo img {
   height: 3rem;
   width: auto;
+  transition: background-color 0.2s ease-in 0.1s;
+}
+.logo img:hover {
+  background-color: #104956;
 }
 header nav {
 	padding-right: 1.5rem;
@@ -100,42 +126,100 @@ nav span {
 	padding-left: 1rem;
 }
 span a {
-  color: white;
+  color: #104956;
 	font-weight: bold;
   font-size: 1.5rem;
   transition: color 0.2s ease-in 0.1s;
 }
 span a:hover {
-	color: #89357c;
+	color: white;
 }
 nav input[type=text] {
   height: 1.5rem;
   font-size: 1.25rem;
 }
 nav input[type=text]:hover {
-  background-color: #89357c;
+  background-color: #1a7b90;
   transition: 0.2s ease-in 0.1s;
+}
+.fa-bars {
+  color: #104956;
+  font-size: 1.5rem;
+}
+.fa-bars:hover {
+  color: white;
+  transition: 0.2s ease-in 0.1s;
+}
+
+/*Side Navigation*/
+/* The side navigation menu */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  background-color: #104956;
+  opacity: 0.9;
+  overflow-x: hidden;
+  transition: 0.5s ease-in;
+}
+/* The navigation menu links */
+.sidenav a {
+  padding: 0.5rem 1rem 0.5rem 2rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color:  #c9b6c6;
+  font-weight: bold;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a:hover {
+  color: white;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0.5rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  margin-left: 50px;
+  color:  #491d43;
+  font-weight: bold;
+}
+.sidenav span h1 {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  background-color: #1a7b90;
+  border-bottom: 2px solid #3a3a3a;
 }
 
 /*Banner*/
 .banner {
   position: relative;
-	top: 4rem;
   margin-bottom: 4rem;
-  background-image: url('../../resources/images/Community Work Central pic.png');
-  min-height: 350px;
+  top: 4rem;
+  background-image: url('../../resources/images/Maori culture.jpg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat;
 }
 .banner-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1rem;
 }
 .banner h1 {
+  color: #3a3a3a;
   font-size: 3.5rem;
   font-weight: bold;
-  padding-top: 2rem;
 }
 .banner h2 {
+  color: #3a3a3a;
   font-size: 1.5rem;
   font-weight: bold;
   padding-left: 22rem;
@@ -159,6 +243,7 @@ nav input[type=text]:hover {
   background-color: #89357c;
   color: #f4f4f4;
 }
+
 
 /*Grid Container*/
 .grid {
