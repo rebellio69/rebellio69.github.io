@@ -62,9 +62,11 @@ font-family: 'Ubuntu', sans-serif; */
 html {
 	font-size: 16px;
 }
+
 .container {
 	font-family: 'Ubuntu', sans-serif;
   background-color: #d6f0f5;
+  margin: 0;
 }
 h1, h2, p {
   text-align: center;
@@ -95,13 +97,13 @@ li a:hover {
 
 /*Header Section*/
 header {
+  width: 100vw;
 	display: flex;
   justify-content: center;
   align-items: center;
 	height: 4rem;
 	position: fixed;
 	z-index: 1;
-	width: 100%;
 	background-color: #1a7b90;
 	opacity: 0.9;
 	border-bottom: 2px solid #3a3a3a;
@@ -184,7 +186,6 @@ nav input[type=text]:hover {
   top: 0.5rem;
   right: 1.5rem;
   font-size: 2rem;
-  margin-left: 50px;
   color:  #491d43;
   font-weight: bold;
 }
@@ -248,7 +249,6 @@ nav input[type=text]:hover {
 /*Grid Container*/
 .grid {
   display: grid;
-  height: 110vh;
   grid-template: 35vh 25vh 25vh 12vh 12vh / repeat(12, 1fr);
   padding: 1rem;
 }
@@ -310,6 +310,7 @@ nav input[type=text]:hover {
 .dropdown {
   position: relative;
   display: inline-block;
+  overflow: hidden;
 }
 .dropdown .dropbtn {
   background-color: #89357c;
@@ -321,29 +322,29 @@ nav input[type=text]:hover {
   border: none;
   transition: background-color 0.5s ease-in, width 0.8s linear, font-size 0.8s ease-in;
 }
-.dropdown:hover .dropbtn {
+.dropdown:hover .dropbtn  {
   background-color: #5f9637;
   width: 50%;
   font-size: 1.5rem;
 }
-.dropdown .links {
-  visibility: hidden;
+.dropdown .links  {
   display: flex;
   flex-direction: column;
+  background-color: #c9b6c6;
+  color: black;
   position: absolute;
   top: 0;
   left: 100%;
-  background-color: #c9b6c6;
   width: 48%;
   height: 100%;
+  transition: 0.8s linear;
+
 }
 .dropdown:hover .links {
-  visibility: visible;
-  transition: 0.8s linear;
   left: 52%;
 }
+
 .links a {
-  color: black;
   padding: 12px 16px;
   transition: background-color 0.1s ease-in, color 0.3s ease-in, font-weight 0.3s ease-in, font-size 0.3s ease-in;
 }
