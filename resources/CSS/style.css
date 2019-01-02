@@ -245,7 +245,6 @@ nav input[type=text]:hover {
   color: #f4f4f4;
 }
 
-
 /*Grid Container*/
 .grid {
   display: grid;
@@ -338,7 +337,6 @@ nav input[type=text]:hover {
   width: 48%;
   height: 100%;
   transition: 0.8s linear;
-
 }
 .dropdown:hover .links {
   left: 52%;
@@ -369,6 +367,9 @@ nav input[type=text]:hover {
 .card button {
   padding-top: 1.25rem;
 }
+.dropbtn img {
+  width: 4rem;
+}
 .card .dropbtn {
   display: flex;
   flex-direction: column-reverse;
@@ -382,6 +383,9 @@ nav input[type=text]:hover {
   cursor: pointer;
   border: none;
   transition: all 0.3s ease-in 0.1s;
+}
+.card i {
+  font-size: 3rem;
 }
 
 .card:hover .dropbtn{
