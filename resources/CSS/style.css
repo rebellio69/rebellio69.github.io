@@ -251,6 +251,11 @@ nav input[type=text]:hover {
   grid-template: 35vh 25vh 25vh 12vh 12vh / repeat(12, 1fr);
   padding: 1rem;
 }
+@media only screen and (max-width: 1500px) {
+  .grid {
+    grid-template-rows: 30vh 20vh 20vh 10vh 10vh;
+  }
+}
 
 /*Centre and Agency Grid*/
 .centre {
