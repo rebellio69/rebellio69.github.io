@@ -262,7 +262,11 @@ nav input[type=text]:hover {
     grid-template-rows: 30vh 22vh 22vh 10vh 10vh;
   }
 }
-
+@media only screen and (max-width: 1100px) {
+  .grid {
+    grid-template-rows: 25vh 15vh 15vh 10vh 10vh;
+  }
+}
 
 
 /*Centre and Agency Grid*/
@@ -307,15 +311,19 @@ nav input[type=text]:hover {
 }
 .maps {
   grid-column: 9 / span 2;
+  grid-row: 4 / span 1;
 }
 .address {
   grid-column: 11 / span 2;
+  grid-row: 4 / span 1;
 }
 .EM {
   grid-column: 9 / span 2;
+  grid-row: 5 / span 1;
 }
 .path {
   grid-column: 11 / span 2;
+  grid-row: 5 / span 1;
 }
 
 /*Centre and Agency Dropdown*/
@@ -370,69 +378,65 @@ nav input[type=text]:hover {
 .card {
   position: relative;
   display: inline-block;
-}
-.WLS.card, .NC.card, .hours.card {
+  overflow: hidden;
   margin: 0.5rem;
-}
-.communication.card, .risk.card, .safety.card {
-  margin: 0.5rem;
-}
-.card button {
-  padding-top: 1.25rem;
 }
 
 .card .dropbtn {
   display: flex;
-  flex-direction: column-reverse;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-end;
-  width: 100%;
-  height:100%;
   background-color: #2b96ab;
+  height: 100%;
+  width: 100%;
   color: white;
-  font-size: 1.5rem;
+  padding: 1rem;
   cursor: pointer;
   border: none;
-  transition: all 0.3s ease-in 0.1s;
+  transition: all 0.6s linear;
+}
+.card h3 {
+  text-align: left;
+  padding: 1.5rem;
+}
+.card .fas {
+  font-size: 2rem;
+  padding: 1.5rem;
 }
 .card:hover .dropbtn{
   background-color: #3e8e41;
-  transform: scale(1.02);
-  box-shadow: 8px 10px 5px rgba(0,0,0,0.6);
+  width: 30%;
 }
-.card i {
-  font-size: 3rem;
-  padding-top: 1.5rem;
-  transition: all 0.1s ease-out;
-}
-.card:hover i {
+.card:hover h3 {
   display: none;
 }
 .list {
   display: flex;
   flex-direction: column;
   visibility: hidden;
-  position: absolute;
-  top: 3.2rem;
-  left: 37%;
-  width: 26%;
-  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
-  z-index: 1;
+  position: relative;
+  left: 100%;
+  bottom: 100%;
+  width: 30%;
+  margin: 1rem 0;
+  height: 100%;
   background-color: #2b96ab;
-  transition: all 0.3s ease-in 0.1s;
+  transition: all 0.6s linear;
 }
 .card:hover .list {
   visibility: visible;
+  width: 68%;
+  left: 32%;
   background-color: #3e8e41;
 }
-
 .list:hover {
-  box-shadow: 6px 6px 2px rgba(0,0,0,0.5);
+  box-shadow: 8px 10px 5px rgba(0,0,0,0.6);
   transform: scale(1.01);
 }
+
 .list a {
   color: white;
-  padding: 0.25rem;
+  padding: 0.5rem 1rem;
   transition: background-color 0.1s ease-in, color 0.3s ease-in, font-weight 0.3s ease-in, font-size 0.3s ease-in;
 }
 .list a:hover {
@@ -441,11 +445,15 @@ nav input[type=text]:hover {
   font-weight: bold;
   font-size: 1.1rem;
 }
+.card i {
+  padding-top: 1.5rem;
+  transition: all 0.1s ease-out;
+}
+.card:hover i {
+  display: none;
+}
 
 @media only screen and (max-width: 1100px) {
-  .grid {
-    grid-template-rows: 25vh 15vh 15vh 10vh 10vh;
-  }
   .links a  {
     font-size: 1rem;
     padding: 0.5rem 0.75rem;
@@ -466,30 +474,35 @@ nav input[type=text]:hover {
 /*Quick Links Buttons*/
 .maps, .address {
   margin: 1.5rem 0.5rem 0.25rem 0.5rem;
-  color: white;
-  background-color: #5f9637;
 }
 .EM, .path {
   margin: 0.25rem 0.5rem 1.5rem 0.5rem;
-  color: white;
-  background-color: #5f9637;
-
 }
 .maps, .address, .EM, .path {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  font-size: 1rem;
+  justify-content: center;
+  background-color: #5f9637;
   transition: all 0.3s ease-in-out 0.1s;
 }
-.maps:hover, .address:hover, .EM:hover, .path:hover {
-  font-size: 1.2rem;
+.maps a, .address a, .EM a, .path a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: white;
+  background-color: #5f9637;
+  transition: all 0.3s ease-in-out 0.1s;
+  padding: 0.25rem;
+}
+.maps:hover, .address:hover, .EM:hover, .path:hover{
+  font-size: 1rem;
   transform: scale(1.01);
   box-shadow: 6px 6px 2px rgba(0,0,0,0.5);
 }
-.ql i, .ql a {
-  padding: 1.5rem;
-}
+ .ql .fas, .ql p {
+   padding: 0.5rem;
+ }
 
 .AD {
   display: flex;
