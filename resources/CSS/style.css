@@ -432,7 +432,6 @@ nav input[type=text]:hover {
 }
 .list:hover {
   box-shadow: 8px 10px 5px rgba(0,0,0,0.4);
-  transform: scale(1.01);
 }
 .list a {
   color: white;
@@ -445,13 +444,7 @@ nav input[type=text]:hover {
   font-weight: bold;
   font-size: 1.1rem;
 }
-.card i {
-  padding-top: 1.5rem;
-  transition: all 0.1s ease-out;
-}
-.card:hover i {
-  display: none;
-}
+
 
 @media only screen and (max-width: 1100px) {
   .links a  {
